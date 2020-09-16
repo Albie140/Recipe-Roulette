@@ -2,13 +2,100 @@
 <html lang="en">
 
 <head>
+    <!--Google Fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    </style>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- potentially add a google font -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- style.css featuring layout CSS classes -->
+    <link rel="stylesheet" href="style.css" />
+
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color:rgb(48, 43, 43);">
+    <!--Navbar/Title of Page-->
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Food For Every Mood!</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html"></a></li>
+                    <li><a href="badges.html"></a></li>
+                    <li><a href="collapsible.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <!--Page Layout for side-by-side search coulmn and food/drink coulmn-->
+        <div id="layout" class="container">
+        <!--Two coloumns, left side for search, right for food/drink-->
+            <div class="row">
+                <!--Right side search area-->
+                <div class="col s6">
 
+                
+                </div>
+                
+                
+                <!--Left side food/drink area-->
+                <div id="fdcolumn" class="col s6">
+                    <div class="row">
+                        <!--Food column-->
+                        <div class="col s6">
+                            
+                            <div class="row">
+                                <div id="foodcard" class="col s12">
+                                  <div class="card">
+                                    <div class="card-image">
+                                      <img src="https://materializecss.com/images/sample-1.jpg">
+                                      <span class="card-title">Food</span>
+                                    </div>
+                                    <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </div>
+                        <!--Drink column-->
+                        <div class="col s6">
+
+                            <div class="row">
+                                <div id="drinkcard" class="col s12">
+                                  <div class="card">
+                                    <div class="card-image">
+                                      <img src="https://materializecss.com/images/sample-1.jpg">
+                                      <span class="card-title">Drink</span>
+                                    </div>
+                                    <div class="card-content">
+                                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </div>
+
+                    </div>
+                        
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
 </body>
 
 </html>
@@ -24,19 +111,6 @@
 <!-- card could be existed initially or visisble upon search -->
 <!-- Features: CSS, Bootstrap(maybe), APIs images, icebox feature, . -->
 <!-- finally get reciepes and results -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Ideally, how would it be?  -->
 <!-- - initial landing page with get started option to jump to the next thing -->
