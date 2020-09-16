@@ -7,7 +7,7 @@ border-radius: 15px;
 .nav-wrapper {
     background-color: #350400;
     border: solid black 5px ;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 nav {
     background-color: rgb(48, 43, 43) ;
@@ -38,4 +38,14 @@ nav .brand-logo {
     -webkit-text-stroke:black 1.5px;
     text-shadow: 4px 4px 5px black;
 
+}
+#foodSearchBar {
+    background-color: rgb(48, 43, 43);
+    border: solid black 5px ;
+    border-radius: 5px;
+}
+#drinkSearchBar {
+    background-color: rgb(48, 43, 43);
+    border: solid black 5px ;
+    border-radius: 5px;
 }
