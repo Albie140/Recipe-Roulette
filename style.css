@@ -1,12 +1,51 @@
-#searchArea {
-    height: 500px;
-    width: 300px; 
-}
-
-#drinkCard {
-    height: 500px;
-}
-
-#foodCard {
-    height:500px;
-}
+#layout {
+    background-color: #350400;
+    border: solid black 5px ;
+    border-radius: 15px;
+    }
+    
+    .nav-wrapper {
+        background-color: #350400;
+        border: solid black 5px ;
+        border-radius: 5px;
+    }
+    nav {
+        background-color: rgb(48, 43, 43) ;
+    }
+    #fdcolumn {
+        background-image: url(https://cdn.nohat.cc/thumb/f/720/5233936405889024.jpg);
+        border: solid black 5px ;
+    }
+    .card {
+        border: solid black 5px ;
+    }
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+    
+    nav .brand-logo {
+        position: absolute;
+        color: #fff;
+        display: inline-block;
+        font-size: 50px;
+        padding: 0;
+        font-family:'Anton', sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        -webkit-text-stroke:black 1.5px;
+        text-shadow: 4px 4px 5px black;
+    
+    }
+    #foodSearchBar {
+        background-color: rgb(48, 43, 43);
+        border: solid black 5px ;
+        border-radius: 5px;
+    }
+    #drinkSearchBar {
+        background-color: rgb(48, 43, 43);
+        border: solid black 5px ;
+        border-radius: 5px;
+    }
