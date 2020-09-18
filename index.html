@@ -2,127 +2,235 @@
 <html lang="en">
 
 <head>
-    <!--Google Fonts-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-        </style>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- potentially add a google font -->
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!-- UI KIT CSS CDN -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+
+
+    <!-- google fonts link for "work sans" font -->
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+
+    <!-- food icon favicon -->
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicomatic_fork+knife/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="favicomatic_fork+knife/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicomatic_fork+knife/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="favicomatic_fork+knife/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicomatic_fork+knife/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+        href="favicomatic_fork+knife/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicomatic_fork+knife/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+        href="favicomatic_fork+knife/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicomatic_fork+knife/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicomatic_fork+knife/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicomatic_fork+knife/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicomatic_fork+knife/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicomatic_fork+knife/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+
+    <!-- <title>Document</title> -->
+
+
+    <title>RECIPE | + A RANDOM DRINK |</title>
+
+
     <!-- style.css featuring layout CSS classes -->
+
+
     <link rel="stylesheet" href="style.css" />
-    <!--Goole Fonts-->
-    <title>Document</title>
+
+
+    <!-- <title>Document</title> -->
+
+
 </head>
 
-<body style="background-color:rgb(48, 43, 43);">
-    <!--Navbar/Title of Page-->
-    <div class="container">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">Food For Every Mood!</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html"></a></li>
-                    <li><a href="badges.html"></a></li>
-                    <li><a href="collapsible.html"></a></li>
-                </ul>
+
+<body>
+
+    <!-- navbar w/project title -->
+
+    <div class="uk-navbar-container uk-navbar">
+        <div class="uk-navbar-center">
+            <div class="uk-navbar-center navbarfont">
+                <div>RECIPE {+ A RANDOM DRINK}</div>
             </div>
-        </nav>
-        <br>
-        <br>
-        <br>
-        <!--Page Layout for side-by-side search coulmn and food/drink coulmn-->
-        <div id="layout" class="container">
-        <!--Two coloumns, left side for search, right for food/drink-->
-            <div class="row">
-                <!--Right side search area-->
-                <div class="col s6">
-                    <!-- food search bar-->
-                    <div class="row">
-                        <input id="foodSearchBar" type="text">
-                        <button type="button">Give Me A Food!</button>
+            <a href="" class="uk-navbar-item uk-logo"></a>
+        </div>
+    </div>
 
-                    </div>
-                    <!--Drink search bar-->
-                    <div class="row">
-                        <input id="drinkSearchBar" type="text">
-                        <button type="button">Give Me A Drink!</button>
 
-                    </div>
-                
+    <!-- hero image in cover format. responsive and scales as the viewport changes. -->
+
+
+    <div class="uk-cover-container">
+        <canvas width="" height="500px"></canvas>
+        <img src="dinner_and_a_random_drink_top_cover_image_composite_best.jpg"
+            alt="image of meal content and bonus beverages" uk-cover alt="meals and bonus drink content" uk-cover>
+    </div>
+
+
+    <br>
+
+
+    <!-- header left with header line for design -->
+
+
+
+    <h3 class="uk-heading-line uk-text-left"><span> ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ HUNGRY?</span></h3>
+
+
+
+    <!-- search form for user input. this will be linked to the js file where the ajax api call will take over. -->
+
+
+
+        <form class="uk-search uk-search-default">
+            <span uk-search-icon></span>
+            <input id="#mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
+        </form>
+
+
+
+        <!-- search button for recipe request. <a href> jumps to bottom of page with cards that will display API results below -->
+
+
+
+        <a href="#bottom"><button id="meal-search-button" class="uk-button uk-button-secondary uk-button-small"
+                style="margin-left: 10px">SEARCH</button></a>
+
+ 
+
+
+<!-- addition header line <hr> essentially that is built into the ui kit framework)-->
+
+
+
+    <h3 class="uk-heading-line uk-text-right"><span></span></h3>
+
+
+
+    <!-- page break for breathing room -->
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <!-- ----------------------------- -->
+
+
+
+    <!-- dualing content cards, which will be filled with both the user recipe information and a drink -->
+    <!--  for style purposes these two cards exist within their own container and do not take up the whole viewport -->
+
+
+    <div id="bottom"></div>
+    <div class="uk-container">
+        <div class="uk-child-width-1-2@s" uk-grid>
+            <div>
+                <div class="uk-card uk-card-secondary uk-card-large uk-card-body">
+                    <h3 class="uk-card-title">HERE'S A RECIPE: ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ </h3>
+                    <hr>
+                    <img src="food700.jpg">
+                    <hr>
+                    <h4>VEGETABLE STIR FRY</h4>
+                    <h4></h4>
+                    <hr>
+                    <p>INGREDIENTS:</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. ‎‏‏‎ ‎‏‏‎ ‎‏‏‎
+                    </p>
                 </div>
-                
-                
-                <!--Left side food/drink area-->
-                <div id="fdcolumn" class="col s6">
-                    <div class="row">
-                        <!--Food column-->
-                        <div class="col s6">
-                            
-                            <div class="row">
-                                <div id="foodcard" class="col s12">
-                                  <div class="card">
-                                    <div class="card-image">
-                                      <img src="https://materializecss.com/images/sample-1.jpg">
-                                      <span class="card-title">Food</span>
-                                    </div>
-                                    <div class="card-content">
-                                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+            </div>
 
-                        </div>
-                        <!--Drink column-->
-                        <div class="col s6">
 
-                            <div class="row">
-                                <div id="drinkcard" class="col s12">
-                                  <div class="card">
-                                    <div class="card-image">
-                                      <img src="https://materializecss.com/images/sample-1.jpg">
-                                      <span class="card-title">Drink</span>
-                                    </div>
-                                    <div class="card-content">
-                                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                        </div>
-
-                    </div>
-                        
-
+            <div>
+                <div class="uk-card uk-card-secondary uk-card-large uk-card-body">
+                    <h3 class="uk-card-title">& A RANDOM DRINK:</h3>
+                    <hr><img src="drink700.jpg">
+                    <hr>
+                    <h4>"THE JAPONAISE"</h4>
+                    <h4></h4>
+                    <hr>
+                    <p>INGREDIENTS:</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.‎‏‏‎ ‎‏‏‎
+                    </p>
                 </div>
             </div>
         </div>
-
     </div>
 
-    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- bottom divider with center orb icon -->
+
+
+    <hr class="uk-divider-icon">
+
+
+
+    <!-- UIkit JS / jQuery / moment.js/ script.js -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <!-- end! -->
+
+
 </body>
 
+
 </html>
+
+
+
+
+
+
 <!-- HAPPY CODING :)  -->
 
-<!-- Pseudo code for HTML  -->
-<!-- Step 1: our web layout  -->
-<!-- navbar: for tiltle in the header -->
-<!-- two search bar: one for meals and one for drinks -->
-<!-- search bar with the same form and each have their own submit button -->
-<!-- icebox feature : potentially add a random feature for reciepes -->
-<!-- two cards created for meal and drinks search results, maybe add picture, titles -->
-<!-- card could be existed initially or visisble upon search -->
-<!-- Features: CSS, Bootstrap(maybe), APIs images, icebox feature, . -->
-<!-- finally get reciepes and results -->
 
-<!-- Ideally, how would it be?  -->
-<!-- - initial landing page with get started option to jump to the next thing -->
-<!-- - localStorage would have been used! (go above and beyone yaay!) -->
+
+
+
+
+
+
+
+
+
+
+
+
