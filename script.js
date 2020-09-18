@@ -80,39 +80,38 @@ $(document).ready(function () {
 
             .then(function (response) {
                 console.log(response)
-                let ingredients = [];
+                let drink_obj = { ingredients: [] }
                 let chosen = response.drinks[0];
+                drink_obj.instructions = chosen.strInstructions.split(".")
+                drink_obj.title = chosen.strDrink
+                drink_obj.thumb = chosen.strDrinkThumb
                 Object.keys(chosen).map((key, index) => {
-
                     if (chosen[key] != null) {
                         let new_obj = {}
                         // Check to see if Key contains the word ingredient
                         if (key.includes("Ingredient")) {
                             new_obj["name"] = chosen[key]
-                            new_obj["measure"] = chosen[`strMeasure${key.charAt(key.length - 1)}`]
-                            ingredients.push(new_obj)
+                            new_obj["measure"] = chosen[`strMeasure${key.charAt(key.length - 1)}`].trim()
+                            drink_obj.ingredients.push(new_obj)
                         }
-
-
                     }
                 })
 
-                console.log(ingredients)
+                console.log(drink_obj)
 
+                $("#drinkTitle").html("<h4>" + drink_obj.title + "</h4>");
 
-                $("#drinkTitle").html("<h4>" + response.drinks[0].strDrink + "</h4>");
+                $("#drinkImage").html("<img src=" + drink_obj.thumb + ">");
 
-                $("#drinkImage").html("<img src=" + response.drinks[0].strDrinkThumb + ">");
+                drink_obj.ingredients.map(item => {
+                    $("#drinkIngredients span").append(` ${item.name}`);
+                })
 
-                $("#drinkIngredients").html("<p>" + response.drinks[0].strIngredient1 + " " + response.drinks[0].strIngredient2 + " " + response.drinks[0].strIngredient3 + "</p>");
-
-                $("#drinkInstructions").html("<p>" + response.drinks[0].strInstructions + "</p>");
-
+                drink_obj.instructions.map(inst => {
+                    $("#drinkInstructions").append(`<p>${inst}</p>`);
+                })
             });
-
     };
-
-
 
 });
 
