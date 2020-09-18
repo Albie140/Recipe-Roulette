@@ -79,8 +79,26 @@ $(document).ready(function () {
         })
 
             .then(function (response) {
+                console.log(response)
+                let ingredients = [];
+                let chosen = response.drinks[0];
+                Object.keys(chosen).map((key, index) => {
 
-                console.log(response);
+                    if (chosen[key] != null) {
+                        let new_obj = {}
+                        // Check to see if Key contains the word ingredient
+                        if (key.includes("Ingredient")) {
+                            new_obj["name"] = chosen[key]
+                            new_obj["measure"] = chosen[`strMeasure${key.charAt(key.length - 1)}`]
+                            ingredients.push(new_obj)
+                        }
+
+
+                    }
+                })
+
+                console.log(ingredients)
+
 
                 $("#drinkTitle").html("<h4>" + response.drinks[0].strDrink + "</h4>");
 
