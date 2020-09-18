@@ -1,51 +1,33 @@
-#layout {
-    background-color: #350400;
-    border: solid black 5px ;
-    border-radius: 15px;
-    }
-    
-    .nav-wrapper {
-        background-color: #350400;
-        border: solid black 5px ;
-        border-radius: 5px;
-    }
-    nav {
-        background-color: rgb(48, 43, 43) ;
-    }
-    #fdcolumn {
-        background-image: url(https://cdn.nohat.cc/thumb/f/720/5233936405889024.jpg);
-        border: solid black 5px ;
-    }
-    .card {
-        border: solid black 5px ;
-    }
-    .row {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        padding: 5px;
-    }
-    
-    nav .brand-logo {
-        position: absolute;
-        color: #fff;
-        display: inline-block;
-        font-size: 50px;
-        padding: 0;
-        font-family:'Anton', sans-serif;
-        font-style: italic;
-        font-weight: bold;
-        -webkit-text-stroke:black 1.5px;
-        text-shadow: 4px 4px 5px black;
-    
-    }
-    #foodSearchBar {
-        background-color: rgb(48, 43, 43);
-        border: solid black 5px ;
-        border-radius: 5px;
-    }
-    #drinkSearchBar {
-        background-color: rgb(48, 43, 43);
-        border: solid black 5px ;
-        border-radius: 5px;
-    }
+
+/**************************************************
+CSS: for overall layout appearance:
+navbar color adjustments /font change to "work sans". 
+****************************************************/
+
+
+
+.uk-navbar-container.uk-navbar {
+  
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    font-family: 'Work Sans', sans-serif !important;
+    font-size: 25px !important;
+    color: white;
+    background: black;
+
+}
+
+body {
+    font-family: 'Work Sans', sans-serif !important;
+   
+}
+
+
+/* button adjustment that haven't worked, revisit at a later time */
+
+/* .uk-button.uk-button-secondary.uk-button-small:hover,
+.uk-button.uk-button-secondary.uk-button-small:focus {
+    background-color: $button-secondary-hover-background;
+    color: $button-secondary-hover-color;
+    @if(mixin-exists(hook-button-secondary-hover)) {@include hook-button-secondary-hover();}
+} */
