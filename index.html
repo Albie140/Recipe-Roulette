@@ -107,7 +107,7 @@
 
         <form class="uk-search uk-search-default">
             <span uk-search-icon></span>
-            <input id="#mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
+            <input id="mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
         </form>
 
 
@@ -146,17 +146,17 @@
     <!--  for style purposes these two cards exist within their own container and do not take up the whole viewport -->
 
 
-    <div id="bottom"></div>
+    
     <div class="uk-container">
         <div class="uk-child-width-1-2@s" uk-grid>
             <div>
                 <div class="uk-card uk-card-secondary uk-card-large uk-card-body">
                     <h3 class="uk-card-title">HERE'S A RECIPE: ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ </h3>
                     <hr>
-                    <img src="food700.jpg">
-                    <hr>
-                    <h4>VEGETABLE STIR FRY</h4>
+                    <div id="recipeTitle"></div>
                     <h4></h4>
+                    <hr>
+                    <div id="recipeImage"></div>
                     <hr>
                     <p>INGREDIENTS:</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -169,10 +169,11 @@
             <div>
                 <div class="uk-card uk-card-secondary uk-card-large uk-card-body">
                     <h3 class="uk-card-title">& A RANDOM DRINK:</h3>
-                    <hr><img src="drink700.jpg">
                     <hr>
-                    <h4>"THE JAPONAISE"</h4>
+                    <div id="drinkTitle"></div>
                     <h4></h4>
+                    <hr>
+                    <div id="drinkImage"></div>
                     <hr>
                     <p>INGREDIENTS:</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -182,7 +183,7 @@
             </div>
         </div>
     </div>
-
+<div id="bottom"></div>
     <br>
     <br>
     <br>
