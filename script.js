@@ -52,7 +52,7 @@ $(document).ready(function () {
 
                 $("#recipeImage").html("<img " + "style= 'width: 700px' " + "src=" + data.hits[0].recipe.image + ">");
 
-                
+                $("#recipeIngredients").html("<p>" + data.hits[0].recipe.ingredientLines + "</p>");
 
             });
 
@@ -86,7 +86,9 @@ $(document).ready(function () {
 
                 $("#drinkImage").html("<img src=" + response.drinks[0].strDrinkThumb + ">");
 
+                $("#drinkIngredients").html("<p>" + response.drinks[0].strIngredient1 + " " + response.drinks[0].strIngredient2 + " " + response.drinks[0].strIngredient3 + "</p>");
 
+                $("#drinkInstructions").html("<p>" + response.drinks[0].strInstructions + "</p>");
 
             });
 
