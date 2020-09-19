@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     console.log("I'm ready..");
 
@@ -69,7 +67,8 @@ $(document).ready(function () {
 
     //random option below.
     function randomDrinkOption() {
-
+        $("#drinkIngredients span").empty();
+        $("#drinkInstructions span").empty();
         var queryURL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
 
         $.ajax({
@@ -85,7 +84,7 @@ $(document).ready(function () {
                 drink_obj.instructions = chosen.strInstructions.split(".")
                 drink_obj.title = chosen.strDrink
                 drink_obj.thumb = chosen.strDrinkThumb
-                Object.keys(chosen).map((key, index) => {
+                Object.keys(chosen).forEach((key, index) => {
                     if (chosen[key] != null) {
                         let new_obj = {}
                         // Check to see if Key contains the word ingredient
@@ -103,11 +102,11 @@ $(document).ready(function () {
 
                 $("#drinkImage").html("<img src=" + drink_obj.thumb + ">");
 
-                drink_obj.ingredients.map(item => {
+                drink_obj.ingredients.forEach(item => {
                     $("#drinkIngredients span").append(` ${item.name}`);
                 })
 
-                drink_obj.instructions.map(inst => {
+                drink_obj.instructions.forEach(inst => {
                     $("#drinkInstructions").append(`<p>${inst}</p>`);
                 })
             });
