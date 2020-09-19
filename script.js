@@ -52,7 +52,7 @@ $(document).ready(function () {
 
                 $("#recipeImage").html("<img " + "style= 'width: 700px' " + "src=" + data.hits[0].recipe.image + ">");
 
-                
+                $("#recipeIngredients").html("<p>" + data.hits[0].recipe.ingredientLines + "</p>");
 
             });
 
@@ -79,20 +79,39 @@ $(document).ready(function () {
         })
 
             .then(function (response) {
+                console.log(response)
+                let drink_obj = { ingredients: [] }
+                let chosen = response.drinks[0];
+                drink_obj.instructions = chosen.strInstructions.split(".")
+                drink_obj.title = chosen.strDrink
+                drink_obj.thumb = chosen.strDrinkThumb
+                Object.keys(chosen).map((key, index) => {
+                    if (chosen[key] != null) {
+                        let new_obj = {}
+                        // Check to see if Key contains the word ingredient
+                        if (key.includes("Ingredient")) {
+                            new_obj["name"] = chosen[key]
+                            new_obj["measure"] = chosen[`strMeasure${key.charAt(key.length - 1)}`].trim()
+                            drink_obj.ingredients.push(new_obj)
+                        }
+                    }
+                })
 
-                console.log(response);
+                console.log(drink_obj)
 
-                $("#drinkTitle").html("<h4>" + response.drinks[0].strDrink + "</h4>");
+                $("#drinkTitle").html("<h4>" + drink_obj.title + "</h4>");
 
-                $("#drinkImage").html("<img src=" + response.drinks[0].strDrinkThumb + ">");
+                $("#drinkImage").html("<img src=" + drink_obj.thumb + ">");
 
+                drink_obj.ingredients.map(item => {
+                    $("#drinkIngredients span").append(` ${item.name}`);
+                })
 
-
+                drink_obj.instructions.map(inst => {
+                    $("#drinkInstructions").append(`<p>${inst}</p>`);
+                })
             });
-
     };
-
-
 
 });
 

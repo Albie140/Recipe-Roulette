@@ -105,24 +105,24 @@
 
 
 
-        <form class="uk-search uk-search-default">
-            <span uk-search-icon></span>
-            <input id="mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
-        </form>
+    <form class="uk-search uk-search-default">
+        <span uk-search-icon></span>
+        <input id="mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
+    </form>
 
 
 
-        <!-- search button for recipe request. <a href> jumps to bottom of page with cards that will display API results below -->
+    <!-- search button for recipe request. <a href> jumps to bottom of page with cards that will display API results below -->
 
 
 
-        <a href="#bottom"><button id="meal-search-button" class="uk-button uk-button-secondary uk-button-small"
-                style="margin-left: 10px">SEARCH</button></a>
-
- 
+    <a href="#bottom"><button id="meal-search-button" class="uk-button uk-button-secondary uk-button-small"
+            style="margin-left: 10px">SEARCH</button></a>
 
 
-<!-- addition header line <hr> essentially that is built into the ui kit framework)-->
+
+
+    <!-- addition header line <hr> essentially that is built into the ui kit framework)-->
 
 
 
@@ -146,7 +146,7 @@
     <!--  for style purposes these two cards exist within their own container and do not take up the whole viewport -->
 
 
-    
+
     <div class="uk-container">
         <div class="uk-child-width-1-2@s" uk-grid>
             <div>
@@ -159,9 +159,7 @@
                     <div id="recipeImage"></div>
                     <hr>
                     <p>INGREDIENTS:</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. ‎‏‏‎ ‎‏‏‎ ‎‏‏‎
-                    </p>
+                    <div id="recipeIngredients"></div>
                 </div>
             </div>
 
@@ -176,14 +174,18 @@
                     <div id="drinkImage"></div>
                     <hr>
                     <p>INGREDIENTS:</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.‎‏‏‎ ‎‏‏‎
-                    </p>
+                    <div id="drinkIngredients">
+                        <span></span>
+                    </div>
+
+                    <p>RECIPE:</p>
+                    <div id="drinkInstructions"></div>‎‏‏‎
+
                 </div>
             </div>
         </div>
     </div>
-<div id="bottom"></div>
+    <div id="bottom"></div>
     <br>
     <br>
     <br>
@@ -221,17 +223,3 @@
 
 
 <!-- HAPPY CODING :)  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
