@@ -151,7 +151,7 @@ $(document).ready(function () {
                 $("#drinkImage").html("<img src=" + drink_obj.thumb + ">");
 
                 drink_obj.ingredients.forEach(item => {
-                    $("#drinkIngredients span").append(` ${item.name}`);
+                    $("#drinkIngredients span").append(` ${item.name} ${item.measure}`);
                 })
 
                 drink_obj.instructions.forEach(inst => {
