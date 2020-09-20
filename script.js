@@ -1,6 +1,9 @@
 
 
+
 // $(document).ready() makes the function available once the document is loaded
+
+
 
 
 $(document).ready(function () {
@@ -70,6 +73,7 @@ $(document).ready(function () {
 
                 $("#recipeImage").html("<img " + "style= 'width: 700px' " + "src=" + data.hits[0].recipe.image + ">");
 
+
                 $("#recipeIngredientsLabel").html("<p>" + "INGREDIENTS:" + "</p>");
 
                 $("#recipeIngredients").html("<p>" + data.hits[0].recipe.ingredientLines + "</p>");
@@ -79,6 +83,8 @@ $(document).ready(function () {
                 $("#recipeLink").html("<p>" + "<a href=" + data.hits[0].recipe.url + " target=_'blank' " + ">" + "CLICK HERE TO VIEW THE ENTIRE RECIPE" + "</a>" + "</p>");
 
                 console.log(data.hits[0].recipe.url);
+
+                $("#recipeIngredients").html("<p>" + data.hits[0].recipe.ingredientLines + "</p>");
 
 
             });
@@ -102,9 +108,14 @@ $(document).ready(function () {
     function randomDrinkOption() {
 
 
+
         $("#drinkIngredients span").empty();
         $("#drinkInstructions span").empty();
 
+
+
+        $("#drinkIngredients span").empty();
+        $("#drinkInstructions span").empty();
 
         var queryURL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
 
@@ -117,6 +128,7 @@ $(document).ready(function () {
 
             .then(function (response) {
 
+
                 console.log(response);
 
                 $("#drinkCardHeader").html("<h3 " + "class='uk-card-title'" + ">" + "+ A RANDOM DRINK:" + "</h3>");
@@ -124,6 +136,9 @@ $(document).ready(function () {
                 $("#drinkIngredientsLabel").html("<p>" + "INGREDIENTS:" + "</p>");
 
                 $("#drinkInstructionsLabel").html("<p>" + "INSTRUCTIONS:" + "</p>");
+
+
+                console.log(response)
 
                 let drink_obj = { ingredients: [] }
                 let chosen = response.drinks[0];
@@ -134,21 +149,49 @@ $(document).ready(function () {
                     if (chosen[key] != null) {
                         let new_obj = {}
 
+
                         // check to see if key contains the word ingredient..
 
                         if (key.includes("Ingredient")) {
                             new_obj["name"] = chosen[key]
                             new_obj["measure"] = chosen[`strMeasure${key.charAt(key.length - 1)}`] || ""
+
+                        // Check to see if Key contains the word ingredient
+                        if (key.includes("Ingredient")) {
+                            new_obj["name"] = chosen[key]
+                            new_obj["measure"] = chosen[`strMeasure${key.charAt(key.length - 1)}`].trim()
+
                             drink_obj.ingredients.push(new_obj)
                         }
                     }
                 })
+
 
                 console.log(drink_obj)
 
                 $("#drinkTitle").html("<h4>" + drink_obj.title + "</h4>");
 
                 $("#drinkImage").html("<img src=" + drink_obj.thumb + ">");
+
+
+                console.log(drink_obj)
+
+                $("#drinkTitle").html("<h4>" + drink_obj.title + "</h4>");
+
+                $("#drinkImage").html("<img src=" + drink_obj.thumb + ">");
+
+                drink_obj.ingredients.forEach(item => {
+                    $("#drinkIngredients span").append(` ${item.name}`);
+                })
+
+                drink_obj.instructions.forEach(inst => {
+                    $("#drinkInstructions").append(`<p>${inst}</p>`);
+                })
+            });
+    };
+
+});
+
 
                 drink_obj.ingredients.forEach(item => {
                     $("#drinkIngredients span").append(` ${item.name}`);
