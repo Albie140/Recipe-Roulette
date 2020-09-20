@@ -1,6 +1,6 @@
 
 /**************************************************
-CSS: for overall layout appearance:
+CSS: for overall layout appearance: font appearance
 navbar color adjustments /font change to "work sans". 
 ****************************************************/
 
@@ -17,17 +17,28 @@ navbar color adjustments /font change to "work sans".
 
 }
 
+
+
 body {
+
     font-family: 'Work Sans', sans-serif !important;
    
 }
 
 
+
+#drinkInstructionsLabel, #drinkIngredientsLabel, #recipeIngredientsLabel, #recipeLinkLabel {
+
+    color:white;
+    font-weight: bold;
+}
+
+
+
 /* button adjustment that haven't worked, revisit at a later time */
 
-/* .uk-button.uk-button-secondary.uk-button-small:hover,
-.uk-button.uk-button-secondary.uk-button-small:focus {
-    background-color: $button-secondary-hover-background;
-    color: $button-secondary-hover-color;
-    @if(mixin-exists(hook-button-secondary-hover)) {@include hook-button-secondary-hover();}
-} */
+/* .uk-button.uk-button-secondary.uk-button-small :hover,
+.uk-button.uk-button-secondary.uk-button-small :focus {
+    background-color: red !important;
+    color: white !important;
+ } */
