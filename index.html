@@ -51,7 +51,7 @@
     <!-- <title>Document</title> -->
 
 
-    <title>RECIPE | + A RANDOM DRINK |</title>
+    <title>RECIPE • ROULETTE</title>
 
 
     <!-- style.css featuring layout CSS classes -->
@@ -73,7 +73,7 @@
     <div class="uk-navbar-container uk-navbar">
         <div class="uk-navbar-center">
             <div class="uk-navbar-center navbarfont">
-                <div>RECIPE {+ A RANDOM DRINK}</div>
+                <div>RECIPE • ROULETTE</div>
             </div>
             <a href="" class="uk-navbar-item uk-logo"></a>
         </div>
@@ -105,24 +105,24 @@
 
 
 
-        <form class="uk-search uk-search-default">
-            <span uk-search-icon></span>
-            <input id="mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
-        </form>
+    <form class="uk-search uk-search-default">
+        <span uk-search-icon></span>
+        <input id="mealSearchInput" class="uk-search-input" type="search" placeholder="FIND A RECIPE">
+    </form>
 
 
 
-        <!-- search button for recipe request. <a href> jumps to bottom of page with cards that will display API results below -->
+    <!-- search button for recipe request. <a href> jumps to bottom of page with cards that will display API results below -->
 
 
 
-        <a href="#bottom"><button id="meal-search-button" class="uk-button uk-button-secondary uk-button-small"
-                style="margin-left: 10px">SEARCH</button></a>
-
- 
+    <button id="meal-search-button" class="uk-button uk-button-secondary uk-button-small"
+        style="margin-left: 10px">SEARCH</button>
 
 
-<!-- addition header line <hr> essentially that is built into the ui kit framework)-->
+
+
+    <!-- addition header line <hr> essentially that is built into the ui kit framework)-->
 
 
 
@@ -143,47 +143,55 @@
 
 
     <!-- dualing content cards, which will be filled with both the user recipe information and a drink -->
-    <!--  for style purposes these two cards exist within their own container and do not take up the whole viewport -->
+    <!-- for style purposes these two cards exist within their own container and do not take up the whole viewport -->
 
 
-    
+    <!-- scrollIntoView using a bottom id -->
+
+
+    <div id="bottom"></div>
+
+
     <div class="uk-container">
         <div class="uk-child-width-1-2@s" uk-grid>
             <div>
-                <div class="uk-card uk-card-secondary uk-card-large uk-card-body">
-                    <h3 class="uk-card-title">HERE'S A RECIPE: ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ </h3>
+                <div class="uk-card uk-card-secondary uk-card-large uk-card-body uk-card-hover">
+                    <div id="recipeCardHeader"></div>
                     <hr>
                     <div id="recipeTitle"></div>
-                    <h4></h4>
                     <hr>
                     <div id="recipeImage"></div>
                     <hr>
-                    <p>INGREDIENTS:</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. ‎‏‏‎ ‎‏‏‎ ‎‏‏‎
-                    </p>
+                    <div id="recipeIngredientsLabel"></div>
+                    <div id="recipeIngredients"></div>
+                    <div id="recipeLinkLabel"></div>
+                    <div id="recipeLink"></div>
                 </div>
             </div>
 
 
             <div>
-                <div class="uk-card uk-card-secondary uk-card-large uk-card-body">
-                    <h3 class="uk-card-title">& A RANDOM DRINK:</h3>
+                <div class="uk-card uk-card-secondary uk-card-large uk-card-body uk-card-hover">
+                    <div id="drinkCardHeader"></div>
                     <hr>
                     <div id="drinkTitle"></div>
-                    <h4></h4>
                     <hr>
                     <div id="drinkImage"></div>
                     <hr>
-                    <p>INGREDIENTS:</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.‎‏‏‎ ‎‏‏‎
-                    </p>
+                    <div id="drinkIngredientsLabel"></div>
+                    <div id="drinkIngredients">
+                        <span></span>
+                    </div>
+                    <p></p>
+                    <div id="drinkInstructionsLabel"></div>
+                    <div id="drinkInstructions">
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-<div id="bottom"></div>
+
     <br>
     <br>
     <br>
@@ -193,7 +201,6 @@
 
 
     <hr class="uk-divider-icon">
-
 
 
     <!-- UIkit JS / jQuery / moment.js/ script.js -->
@@ -221,17 +228,3 @@
 
 
 <!-- HAPPY CODING :)  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
